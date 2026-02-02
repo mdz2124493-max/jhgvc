@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahanov Quest Completer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="bg-container">
+        <div class="grid-overlay"></div>
+        <div class="orbs">
+            <div class="orb orb1"></div>
+            <div class="orb orb2"></div>
+            <div class="orb orb3"></div>
+        </div>
+    </div>
+
+    <header>
+        <div class="logo">AHANOV QUEST COMPLETER</div>
+        <div class="tagline">Advanced Discord Game Activity Simulator</div>
+    </header>
+
+    <main>
+        <!-- Stats Bar -->
+        <div class="stats-bar">
+            <div class="stat-card">
+                <div class="stat-label">Total Games</div>
+                <div class="stat-value" id="totalGames">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Active Sessions</div>
+                <div class="stat-value" id="activeSessions">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Quest Progress</div>
+                <div class="stat-value" id="questProgress">0%</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Connection Status</div>
+                <div class="stat-value" id="connectionStatus" style="font-size: 1.2rem;">OFFLINE</div>
+            </div>
+        </div>
+
+        <!-- Search Section -->
+        <div class="search-section">
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    class="search-input" 
+                    id="searchInput"
+                    placeholder="Search verified Discord games..."
+                    autocomplete="off"
+                >
+                <div class="search-icon">🔍</div>
+                <div class="search-results" id="searchResults"></div>
+            </div>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="main-grid">
+            <!-- Left Panel: Game List -->
+            <div class="panel">
+                <div class="panel-title">▸ Selected Games</div>
+                <div class="game-list" id="gameList">
+                    <div class="empty-state">
+                        <div class="empty-state-icon">🎮</div>
+                        <p>No games selected yet</p>
+                        <p style="font-size: 0.85rem; margin-top: 0.5rem;">Search and add verified games to get started</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Panel: Actions -->
+            <div class="panel action-panel">
+                <div class="panel-title">▸ Game Control</div>
+                <div id="actionContent">
+                    <div class="empty-state" style="padding: 2rem;">
+                        <div class="empty-state-icon">⚡</div>
+                        <p>Select a game to view controls</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
